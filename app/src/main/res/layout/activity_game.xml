@@ -6,6 +6,63 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="8dp"
-    tools:context=".GameActivity">
+    tools:context=".controller.GameActivity">
 
+    <TextView
+        android:id="@+id/myQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="8dp"
+        android:layout_weight="4"
+        android:background="@color/black"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="Question ?"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        />
+    <Button
+        android:id="@+id/btnAnswer1"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textSize="21sp"
+        tools:text="Answer1"
+        />
+    <Button
+        android:id="@+id/btnAnswer2"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textSize="21sp"
+        tools:text="Answer2"
+        />
+    <Button
+        android:id="@+id/btnAnswer3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textSize="21sp"
+        tools:text="Answer3"
+        />
+    <Button
+        android:id="@+id/btnAnswer4"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:textSize="21sp"
+        tools:text="Answer4"
+        />
 </LinearLayout>

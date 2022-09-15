@@ -1,7 +1,8 @@
-package com.example.firstproject;
+package com.example.firstproject.controller;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -10,10 +11,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.firstproject.R;
+import com.example.firstproject.model.User;
+
 public class MainActivity extends AppCompatActivity {
     private TextView myText;
     private EditText myEditTxt;
     private Button myBtnClick;
+    User nameUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         myEditTxt = findViewById(R.id.editTxt);
         myBtnClick = findViewById(R.id.btnClick);
         myBtnClick.setEnabled(false);
+        nameUser = new User();
 
         //add Listner to input text
         myEditTxt.addTextChangedListener(new TextWatcher() {
@@ -47,7 +53,9 @@ public class MainActivity extends AppCompatActivity {
         myBtnClick.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent gameActivityIntent = new Intent(MainActivity.this, GameActivity.class);
+                startActivity(gameActivityIntent);
+                nameUser.setMyFirstName(myEditTxt.getText().toString());
             }
         });
     }
